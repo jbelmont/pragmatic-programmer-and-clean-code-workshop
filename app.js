@@ -10,21 +10,8 @@ server.connection({
     port: process.env.PORT || 3000 
 });
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-        reply('Hello, world!');
-    }
-});
-
-server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: function (request, reply) {
-        reply('Hello, ' + encodeURIComponent(request.params.name) + '!');
-    }
-});
+const routes = require('./routes');
+server.routes(routes);
 
 server.register({
     register: Good,

@@ -33,7 +33,9 @@
     "hapi": "^16.0.1",
     "hbs": "^4.0.1",
     "inert": "^4.0.3",
-    "redis": "^2.6.3"
+    "mongodb": "^2.2.16",
+    "redis": "^2.6.3",
+    "winston": "^2.3.0"
   },
   "devDependencies": {
     "eslint": "^3.12.2",
