@@ -1,16 +1,11 @@
-module.exports = [
-    {
-        method: 'GET',
-        path: '/',
-        handler: function (request, reply) {
-            reply('Hello, world!');
+module.exports = users => {
+    return [
+        {
+            method: 'GET',
+            path: '/',
+            handler: function (request, reply) {
+                reply(users);
+            }
         }
-    },
-    {
-        method: 'GET',
-        path: '/{name}',
-        handler: function (request, reply) {
-            reply('Hello, ' + encodeURIComponent(request.params.name) + '!');
-        }
-    }
-];
+    ]
+};

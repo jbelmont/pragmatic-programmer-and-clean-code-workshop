@@ -10,8 +10,13 @@ server.connection({
     port: process.env.PORT || 3000 
 });
 
-const routes = require('./routes');
-server.routes(routes);
+const db = require('./db/db');
+db.dbInit()
+.then(users => {
+    const routes = require('./routes')(users);
+    server.route(routes);
+})
+.catch(err => err);
 
 server.register({
     register: Good,

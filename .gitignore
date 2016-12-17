@@ -38,3 +38,9 @@ jspm_packages
 
 # Environment Variables
 /.env
+
+# MongoDb data
+/mongodbData
+
+# vscode
+/.vscode

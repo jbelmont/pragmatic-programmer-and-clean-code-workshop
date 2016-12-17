@@ -4,7 +4,8 @@
   "description": "Principles from Pragmatic Programmer and Clean Code",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony app.js"
+    "start": "node --harmony app.js",
+    "debug": "node --inspect app.js"
   },
   "repository": {
     "type": "git",

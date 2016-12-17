@@ -1,7 +1,7 @@
+const winston = require('winston');
 const MongoClient = require('mongodb').MongoClient;
-
 const {mongoUrl} = require('../constants');
-const {users} = require('../models/users');
+const data = require('../models/users')["users"];
 
 const mongoConnection = url => {
     return new Promise((resolve, reject) => {
@@ -18,7 +18,7 @@ const insertDocuments = db => {
     return new Promise((resolve, reject) => {
         const users = db.collection('users');
         // Insert some documents
-        users.insertMany(users, (err, result) => {
+        users.insertMany(data, (err, result) => {
             if (!err) {
                 resolve(result);
             }
@@ -46,10 +46,9 @@ const dbInit = () => {
         .then(db => {
             dbConnection = db;
             return findDocuments(db)
-                .then(docs => docs)
-                .catch(err => {
-                    winston.err(err);
-                    return insertDocuments(dbConnection)
+                .then(docs => {
+                    if (docs.length === 0) {
+                        return insertDocuments(dbConnection)
                         .then(result => {
                             winston.info(result);
                         })
@@ -59,7 +58,13 @@ const dbInit = () => {
                                 .catch(err => winston.err(err))
                         })
                         .catch(err => winston.err(err));
+                    } else {
+                        return docs;
+                    }
                 })
+                .catch(err => {
+                    winston.err(err);
+                });
         })
 };
 
