@@ -1,3 +1,3 @@
 module.exports = {
-    mongoUrl: "mongodb://localhost:27017/pragprogandcleancode"
-}
+    mongoUrl: 'mongodb://localhost:27017/pragprogandcleancode'
+};

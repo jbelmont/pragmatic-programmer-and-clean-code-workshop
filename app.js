@@ -3,7 +3,7 @@
 const Hapi = require('hapi');
 const Good = require('good');
 
-require('./config/config')["dotEnv"];
+require('./config/config')['dotEnv'];
 
 const server = new Hapi.Server();
 server.connection({ 

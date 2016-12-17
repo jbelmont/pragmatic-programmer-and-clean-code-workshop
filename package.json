@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node --harmony app.js",
-    "debug": "node --inspect app.js"
+    "debug": "node --inspect app.js",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "winston": "^2.3.0"
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
     "eslint": "^3.12.2",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-config-standard": "^6.2.1",

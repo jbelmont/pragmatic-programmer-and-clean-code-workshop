@@ -1,0 +1,4 @@
+/node_modules
+/mongodbData
+/static/build
+/models/users.js

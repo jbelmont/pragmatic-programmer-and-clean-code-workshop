@@ -1,7 +1,7 @@
 const winston = require('winston');
 const MongoClient = require('mongodb').MongoClient;
 const {mongoUrl} = require('../constants');
-const data = require('../models/users')["users"];
+const data = require('../models/users')['users'];
 
 const mongoConnection = url => {
     return new Promise((resolve, reject) => {
@@ -55,7 +55,7 @@ const dbInit = () => {
                         .then(() => {
                             return findDocuments(dbConnection)
                                 .then(docs => docs)
-                                .catch(err => winston.err(err))
+                                .catch(err => winston.err(err));
                         })
                         .catch(err => winston.err(err));
                     } else {
@@ -65,7 +65,7 @@ const dbInit = () => {
                 .catch(err => {
                     winston.err(err);
                 });
-        })
+        });
 };
 
 exports.dbInit = dbInit;
