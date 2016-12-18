@@ -3,8 +3,8 @@ module.exports = users => {
         {
             method: 'GET',
             path: '/',
-            handler: function (request, reply) {
-                reply(users);
+            handler: (request, reply) => {
+                reply.view('index', users);
             }
         }
     ];

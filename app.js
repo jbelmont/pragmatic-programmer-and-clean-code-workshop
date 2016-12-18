@@ -48,3 +48,11 @@ server.register({
         server.log('info', 'Server running at: ' + server.info.uri);
     });
 });
+
+server.views({
+    engines: {
+        html: require('handlebars')
+    },
+    relativeTo: __dirname,
+    path: './views'
+});
