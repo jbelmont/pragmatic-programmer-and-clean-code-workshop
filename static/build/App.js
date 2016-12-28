@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d9815469fa30eb420329"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "65bde98c48e6952ab349"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -24196,7 +24196,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	
 	var _redux = __webpack_require__(189);
@@ -24208,7 +24208,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var todoApp = (0, _redux.combineReducers)({
-	  users: _users2.default
+	    users: _users2.default
 	});
 	
 	exports.default = todoApp;
@@ -24220,26 +24220,26 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	var users = function users() {
-	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-	  var action = arguments[1];
+	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	    var action = arguments[1];
 	
-	  switch (action.type) {
-	    case 'ADD_USERS':
-	      return {
-	        id: action.id,
-	        text: action.text,
-	        completed: false
-	      };
-	      return Object.assign({}, state, {
-	        completed: !state.completed
-	      });
+	    switch (action.type) {
+	        case 'ADD_USERS':
+	            return {
+	                id: action.id,
+	                text: action.text,
+	                completed: false
+	            };
+	            return Object.assign({}, state, {
+	                completed: !state.completed
+	            });
 	
-	    default:
-	      return state;
-	  }
+	        default:
+	            return state;
+	    }
 	};
 	
 	exports.default = users;
@@ -24334,29 +24334,29 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	var nextTodoId = 0;
 	var addTodo = exports.addTodo = function addTodo(text) {
-	  return {
-	    type: 'ADD_TODO',
-	    id: nextTodoId++,
-	    text: text
-	  };
+	    return {
+	        type: 'ADD_TODO',
+	        id: nextTodoId++,
+	        text: text
+	    };
 	};
 	
 	var setVisibilityFilter = exports.setVisibilityFilter = function setVisibilityFilter(filter) {
-	  return {
-	    type: 'SET_VISIBILITY_FILTER',
-	    filter: filter
-	  };
+	    return {
+	        type: 'SET_VISIBILITY_FILTER',
+	        filter: filter
+	    };
 	};
 	
 	var toggleTodo = exports.toggleTodo = function toggleTodo(id) {
-	  return {
-	    type: 'TOGGLE_TODO',
-	    id: id
-	  };
+	    return {
+	        type: 'TOGGLE_TODO',
+	        id: id
+	    };
 	};
 
 /***/ },

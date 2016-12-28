@@ -144,7 +144,7 @@
                 if (href && href.split) {
                     url = href.split('#');
                 } else {
-                    url = ["", ""];
+                    url = ['', ''];
                 }
                 base = url[0];
                 hash = url[1];

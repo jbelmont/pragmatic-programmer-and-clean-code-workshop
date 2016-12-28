@@ -1,18 +1,12 @@
 const users = (state = {}, action) => {
-  switch (action.type) {
+    switch (action.type) {
     case 'ADD_USERS':
-      return {
-        id: action.id,
-        text: action.text,
-        completed: false
-      };
-      return Object.assign({}, state, {
-        completed: !state.completed
-      });
-
+        return Object.assign({}, state, {
+            completed: !state.completed
+        });
     default:
-      return state;
-  }
-}
+        return state;
+    }
+};
 
-export default users
+export default users;

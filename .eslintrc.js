@@ -22,6 +22,9 @@ module.exports = {
 
         // disable rules from base configurations
         "no-console": "off",
+
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
     },
     "env": {
         "browser": true,
