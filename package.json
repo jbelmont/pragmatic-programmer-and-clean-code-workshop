@@ -12,7 +12,7 @@
     "predev": "npm run clean:build",
     "dev": "gulp dev",
     "dev:debug": "gulp dev:debug",
-    "build": "npm run clean:build && gulp build"
+    "build": "npm run clean:build && npm run lint && gulp build"
   },
   "repository": {
     "type": "git",
