@@ -49,3 +49,5 @@ jspm_packages
 /ca
 
 /static/build
+
+/__tests__/__snapshots__
