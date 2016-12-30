@@ -13,6 +13,7 @@ test('Practice Dry Principles', nest => {
             average
         } = require('./program');
 
+        assert.ok(average, 'average does exist');
         const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         const actual = average(numbers);
         const expected = 5.5;
@@ -25,6 +26,7 @@ test('Practice Dry Principles', nest => {
             average2
         } = require('./program');
 
+        assert.ok(average2, 'average2 does exist');
         const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         const actual = average2(numbers);
         const expected = 5.5;

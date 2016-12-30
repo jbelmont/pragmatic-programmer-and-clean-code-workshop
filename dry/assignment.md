@@ -18,5 +18,4 @@
 ###Exercise instructions
 *1. Open program.js*
 *2. Study the ugly average implementation and think why it is not dry.*
-*3. Add another average function.*
-*4. Add additional test in program.test.js with your refactored implementation.*
+*3. Fix failing test using some test driven development.*
