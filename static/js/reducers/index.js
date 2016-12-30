@@ -1,8 +1,13 @@
 import { combineReducers } from 'redux';
-import users from './users';
+import { routerReducer } from 'react-router-redux';
 
-const todoApp = combineReducers({
-    users
+import users from './users';
+import userInfo from './userDetailInformation';
+
+export const rootReducer = combineReducers({
+    users,
+    userInfo,
+    routing: routerReducer 
 });
 
-export default todoApp;
+export default rootReducer;

@@ -1,12 +1,27 @@
-const users = (state = {}, action) => {
-    switch (action.type) {
-    case 'ADD_USERS':
-        return Object.assign({}, state, {
-            completed: !state.completed
-        });
+function users(state = [], action) {
+  const {
+        type,
+        email,
+        firstName,
+        lastName,
+        gender,
+        id
+    } = action;
+  switch(type) {
+    case 'ADD_NEW_USER':
+            return [
+              ...state,
+              {
+                email: email,
+                first_name: firstName,
+                last_name: lastName,
+                gender: gender,
+                id: id
+              }
+            ]
     default:
-        return state;
-    }
-};
+      return state;
+  }
+}
 
 export default users;

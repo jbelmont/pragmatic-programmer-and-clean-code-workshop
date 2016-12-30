@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        App: './static/js/index.js'
+        App: './static/js/components/App.jsx'
     },
     output: {
         path: __dirname + '/static/build',

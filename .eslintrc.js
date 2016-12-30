@@ -32,7 +32,8 @@ module.exports = {
         "shelljs": true,
         "jest": true,
         "es6": true,
-        "commonjs": true
+        "commonjs": true,
+        "mongo": true
     },
     "plugins": [
         "react",

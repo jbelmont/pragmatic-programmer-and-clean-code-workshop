@@ -21,7 +21,8 @@ const jsPaths = [
     'static/js/components/*.js'
 ];
 const sassPaths = [
-    'static/scss/*.scss'
+  'static/scss/*.scss',
+  './node_modules/bootstrap/dist/css/bootstrap.min.css'
 ];
 
 const filesToCopy = [
@@ -34,10 +35,13 @@ const filesToCopy = [
         dest: './static/build'
     },
     {
+        src: './node_modules/react-bootstrap/dist/react-bootstrap.min.js',
+        dest: './static/build'
+    },
+    {
         src: './images/favicon.ico',
         dest: './static/build'
     },
-
     {
         src: './icomoon/symbol-defs.svg',
         dest: './static/build'
@@ -113,6 +117,7 @@ gulp.task('watch:sass', () => {
 
 gulp.task('start', () => {
     nodemon({
+        exec: 'node --harmony',
         script: './bin/www',
         ignore: ['static/*'],
         env: { 'PORT': '3000' }
