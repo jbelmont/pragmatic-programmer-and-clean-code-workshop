@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="reveal.css">
+        <link rel="stylesheet" href="zenburn.css">
+        <link rel="stylesheet" href="css/theme/league.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+					<h4>Code Craftsmanship Saturdays Fifth Session</h4>
+					<p>Speaker Jean-Marcel Belmont</p>
+					<p>Topics today will revolve around the books Pragmatic Programmer and Clean Code</p>
+				</section>
+                <section>
+					<h4>Pragmatic Software Development Tips</h4>
+					<p>Care About Your Craft</p>
+					<p>Why spend your life developing software unless you care about doing it well?</p>
+
+					<p>Provide Options, Don’t Make Lame Excuses</p>
+					<p>Instead of excuses, provide options. Don’t say it can’t be done; explain what can be done.</p>
+
+					<p>Be a Catalyst for Change</p>
+					<p>You can’t force change on people. Instead, show them how the future might be and help them participate in creating it.</p>
+
+					<p>Make Quality a Requirements Issue</p>
+					<p>Involve your users in determining the project’s real quality requirements.</p>
+
+					<p>Critically Analyze What You Read and Hear</p>
+					<p>Don’t be swayed by vendors, media hype, or dogma. Analyze information in terms of you and your project.</p>
+                </section>
+        </div>
+		<script src="lib/js/head.min.js"></script>
+        <script src="reveal.js"></script>
+        <script>			
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'convex',    
+				math: {
+					mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+					config: 'TeX-AMS_HTML-full'
+				},            
+				dependencies: [
+					{ 
+						src: 'plugin/highlight/highlight.js', 
+						async: true, 
+						callback: function() { 
+							hljs.initHighlightingOnLoad(); 
+						} 
+					},
+					{ 
+						src: 'plugin/math/math.js', 
+						async: true 
+					}
+				]
+			});
+		</script>
+    </body>
+</html>
