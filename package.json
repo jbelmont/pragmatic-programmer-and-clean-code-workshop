@@ -34,6 +34,7 @@
     "winston": "^2.3.0"
   },
   "devDependencies": {
+    "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
@@ -50,6 +51,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
+    "istanbul": "^0.4.5",
     "nock": "^9.0.2",
     "supertest": "^2.0.1",
     "tape": "^4.6.3"

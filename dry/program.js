@@ -8,7 +8,4 @@ function uglyAverage() {
     return sum / numbers.length;
 }
 
-
-function average() {}
-// exports.average = average;
 exports.uglyAverage = uglyAverage;
