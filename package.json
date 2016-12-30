@@ -4,19 +4,8 @@
   "description": "Principles from Pragmatic Programmer and Clean Code",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony app.js",
-    "debug": "node --inspect app.js",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "clean:build": "rimraf ./static/build",
-    "predev": "npm run clean:build",
-    "dev": "gulp dev",
-    "dev:debug": "gulp dev:debug",
-    "build": "npm run clean:build && npm run lint && gulp build",
-    "test": "jest",
-    "test:action:creators": "jest __tests__/actions.test.js",
-    "test:reducers": "jest __tests__/reducers.test.js",
-    "test:users:component": "jest __tests__/users.test.js"
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
