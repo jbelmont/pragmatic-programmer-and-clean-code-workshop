@@ -6,8 +6,8 @@ describe('Test all the reducers', () => {
 
     let ADD_USER_DETAIL_INFO, EMPTY_USER_INFO, DEFAULT = '';
     beforeAll(() => {
-        ADD_USER_DETAIL_INFO = types["ADD_USER_DETAIL_INFO"];
-        EMPTY_USER_INFO = types["EMPTY_USER_INFO"];
+        ADD_USER_DETAIL_INFO = types['ADD_USER_DETAIL_INFO'];
+        EMPTY_USER_INFO = types['EMPTY_USER_INFO'];
     });
 
     describe('Test the users reducer', () => {
@@ -24,7 +24,7 @@ describe('Test all the reducers', () => {
             expect(
                 userInformationReducer(
                     [
-                        {"email":"handersonj@about.com","first_name":"Harry","gender":"Male","id":20,"last_name":"Anderson"}
+                        {'email':'handersonj@about.com','first_name':'Harry','gender':'Male','id':20,'last_name':'Anderson'}
                     ], 
                     {
                         type: DEFAULT
@@ -32,7 +32,7 @@ describe('Test all the reducers', () => {
                 )
             ).toEqual(
                 [
-                    {"email":"handersonj@about.com","first_name":"Harry","gender":"Male","id":20,"last_name":"Anderson"}
+                    {'email':'handersonj@about.com','first_name':'Harry','gender':'Male','id':20,'last_name':'Anderson'}
                 ]
             );
         });
@@ -41,7 +41,7 @@ describe('Test all the reducers', () => {
             expect(
                 userInformationReducer(
                     [
-                        {"email":"handersonj@about.com","first_name":"Harry","gender":"Male","id":20,"last_name":"Anderson"}
+                        {'email':'handersonj@about.com','first_name':'Harry','gender':'Male','id':20,'last_name':'Anderson'}
                     ], 
                     {
                         type: EMPTY_USER_INFO
@@ -55,16 +55,16 @@ describe('Test all the reducers', () => {
                 userInformationReducer(
                     [], 
                     {
-                        "type": ADD_USER_DETAIL_INFO,
-                        "email": "handersonj@about.com",
-                        "firstName": "Harry",
-                        "gender": "Male",
-                        "id": 20,
-                        "lastName": "Anderson"
+                        'type': ADD_USER_DETAIL_INFO,
+                        'email': 'handersonj@about.com',
+                        'firstName': 'Harry',
+                        'gender': 'Male',
+                        'id': 20,
+                        'lastName': 'Anderson'
                     }
                 )
             ).toEqual(
-                {"email":"handersonj@about.com","firstName":"Harry","gender":"Male","id":20,"lastName":"Anderson"}
+                {'email':'handersonj@about.com','firstName':'Harry','gender':'Male','id':20,'lastName':'Anderson'}
             );
         });
 

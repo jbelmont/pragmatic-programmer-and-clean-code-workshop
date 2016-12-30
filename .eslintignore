@@ -1,5 +1,5 @@
 /node_modules
 /mongodbData
-/static/build/**/*
+/static/build
 /models/users.js
 /icomoon

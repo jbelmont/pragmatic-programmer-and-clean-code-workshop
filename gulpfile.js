@@ -21,8 +21,8 @@ const jsPaths = [
     'static/js/components/*.js'
 ];
 const sassPaths = [
-  'static/scss/*.scss',
-  './node_modules/bootstrap/dist/css/bootstrap.min.css'
+    'static/scss/*.scss',
+    './node_modules/bootstrap/dist/css/bootstrap.min.css'
 ];
 
 const filesToCopy = [

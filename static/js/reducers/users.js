@@ -1,5 +1,5 @@
 function users(state = [], action) {
-  const {
+    const {
         type,
         email,
         firstName,
@@ -7,21 +7,21 @@ function users(state = [], action) {
         gender,
         id
     } = action;
-  switch(type) {
+    switch(type) {
     case 'ADD_NEW_USER':
-            return [
-              ...state,
-              {
+        return [
+            ...state,
+            {
                 email: email,
                 first_name: firstName,
                 last_name: lastName,
                 gender: gender,
                 id: id
-              }
-            ]
+            }
+        ];
     default:
-      return state;
-  }
+        return state;
+    }
 }
 
 export default users;
