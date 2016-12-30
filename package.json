@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "dry:test": "tape dry/program.test.js",
+    "dry:test:solution": "tape dry/solution/program.test.js"
   },
   "repository": {
     "type": "git",
