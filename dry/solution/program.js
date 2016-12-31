@@ -59,7 +59,7 @@ class MathImpl {
     }
 }
 
-function MathImplement(numbers) {
+function MathImpl2(numbers) {
     this.numbers = numbers;
 
     this.average = () => {
@@ -79,11 +79,49 @@ function MathImplement(numbers) {
     };
 }
 
+function MathImpl3(numbers) {
+    this.numbers = numbers;
+}
+
+MathImpl3.prototype.average = (numbers) => {
+    return numbers.reduce((previous, current) => previous + current, 0) / numbers.length;
+};
+
+MathImpl3.prototype.printWithTwoCharacters = standardDeviation => {
+    return Number(standardDeviation.toFixed(2));
+};
+
+MathImpl3.prototype.standardDeviation = (numbers) => {
+    const avg = MathImpl3.prototype.average.call(null, numbers);
+    const summation = numbers
+        .map(val => Math.pow(Math.abs(val - avg), 2))
+        .reduce((prev, curr) => prev + curr, 0) / numbers.length;
+    return MathImpl3.prototype.printWithTwoCharacters.call(null, Math.sqrt(summation));
+}
+
+const average3 = input => {
+    return input.reduce((prev, curr) => prev + curr, 0) / input.length;
+};
+
+const formatNumbers = standardDeviation => {
+    return Number(standardDeviation.toFixed(2));
+};
+
+const standardDeviation = input => {
+    const avg = average3(input);
+    const summation = input
+        .map(val => Math.pow(Math.abs(val - avg), 2))
+        .reduce((prev, curr) => prev + curr, 0) / input.length;
+    return formatNumbers(Math.sqrt(summation));
+};
+
 module.exports = {
     uglyAverage,
     uglyStandardDeviation,
     average,
     average2,
     MathImpl,
-    MathImplement
+    MathImpl2,
+    MathImpl3,
+    standardDeviation
 };
