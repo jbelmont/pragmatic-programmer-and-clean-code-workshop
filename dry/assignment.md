@@ -20,4 +20,6 @@
 
 *2. Study the ugly average implementation and think why it is not dry.*
 
-*3. Fix failing test using some test driven development.*
+*3. Fix failing tests by correcting implementation and read TODOS in each tests.*
+
+###### The testing framework ava.js only reports the failing assertion but not all of them like tape.js and mocha.js so be mindful of this.

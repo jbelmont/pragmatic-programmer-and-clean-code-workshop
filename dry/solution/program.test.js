@@ -7,7 +7,7 @@ test('Test ugly average function', t => {
     // calling uglyAverage returns hard-coded value
     const actual = uglyAverage();
     const expected = 3;
-    t.is(actual, expected, 'uglyAverage returns hard-coded value of 3');
+    t.is(actual, expected, `uglyAverage returns hard-coded value of ${expected}`);
 });
 
 test('Test refactored average function', t => {
@@ -20,7 +20,7 @@ test('Test refactored average function', t => {
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const actual = average(numbers);
     const expected = 5.5;
-    t.is(actual, expected, 'average returns 5.5');
+    t.is(actual, expected, `average returns ${expected}`);
 });
 
 test('Test refactored average function with other implementation', t => {
@@ -33,5 +33,43 @@ test('Test refactored average function with other implementation', t => {
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const actual = average2(numbers);
     const expected = 5.5;
-    t.is(actual, expected, 'average2 returns 5.5');
+    t.is(actual, expected, `average2 returns ${expected}`);
+});
+
+test('Test ugly standardDeviation', t => {
+    const {uglyStandardDeviation} = require('./program');
+
+    t.truthy(uglyStandardDeviation, 'uglyStandardDeviation does exist');
+
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    const actual = uglyStandardDeviation(numbers);
+    const expected = 2.87;
+    t.is(actual, expected, `standardDeviation returns ${expected}`);    
+});
+
+test('Test standardDeviation in MathImpl class', t => {
+    const {
+        MathImpl
+    } = require('./program');
+
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const mathImpl = new MathImpl(numbers);
+
+    const actual = mathImpl.standardDeviation();
+    const expected = 2.87;
+    t.is(actual, expected, `standardDeviation returns ${expected}`);
+});
+
+test('Test standardDeviation in MathImpl2 class', t => {
+    const {
+        MathImplement
+    } = require('./program');
+
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const mathImplement = new MathImplement(numbers);
+
+    const actual = mathImplement.standardDeviation();
+    const expected = 2.87;
+    t.is(actual, expected, `standardDeviation returns ${expected}`);
 });

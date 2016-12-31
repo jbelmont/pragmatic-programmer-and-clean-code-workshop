@@ -7,7 +7,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dry:test": "ava --verbose dry/program.test.js",
-    "dry:test:solution": "ava --verbose dry/solution/program.test.js"
+    "dry:test:solution": "ava --verbose dry/solution/program.test.js",
+    "dry:test:solution:debug": "npm run ava:debug dry/solution/program.test.js",
+    "ava:debug": "node --inspect node_modules/ava/profile.js"
   },
   "repository": {
     "type": "git",
