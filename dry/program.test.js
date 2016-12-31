@@ -1,21 +1,21 @@
-const test = require('tape');
+const test = require('ava');
 
-test('Practice Dry Principles', nest => {
+test('Test ugly average function', t => {
+    const {uglyAverage} = require('./program');
+    t.truthy(uglyAverage, 'uglyAverage does exist');
 
-    nest.test('Test ugly average function', assert => {
-       const {uglyAverage} = require('./program');
-       assert.ok(uglyAverage());
-       assert.end();  
-    });
+    // calling uglyAverage returns hard-coded value
+    const actual = uglyAverage();
+    const expected = 10; // please correct by looking at program.js.
+    t.is(actual, expected, `uglyAverage should return a number but not ${expected}`);
+});
 
-    nest.test('Call average function', assert => {
-        const {average} = require('./program');
-        assert.ok(average, 'Average does exist');
+test('Implement average function', t => {
+    const {average} = require('./program');
+    t.truthy(average, 'average does exist');
 
-        const numbers = [1, 2, 3, 4, 5];
-        const actual = average(numbers);
-        const expected = 3;
-        assert.equal(actual, expected);
-        assert.end();
-    });
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const actual = average(numbers);
+    const expected = 5.5;
+    t.is(actual, expected, `average should return ${expected}`);
 });

@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "dry:test": "tape dry/program.test.js",
-    "dry:test:solution": "tape dry/solution/program.test.js"
+    "dry:test": "ava --verbose dry/program.test.js",
+    "dry:test:solution": "ava --verbose dry/solution/program.test.js"
   },
   "repository": {
     "type": "git",
@@ -53,7 +53,6 @@
     "eslint-plugin-standard": "^2.0.1",
     "nock": "^9.0.2",
     "nyc": "^10.0.0",
-    "supertest": "^2.0.1",
-    "tape": "^4.6.3"
+    "supertest": "^2.0.1"
   }
 }
