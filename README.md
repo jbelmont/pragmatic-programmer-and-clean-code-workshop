@@ -39,3 +39,15 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 ####1. Go to `dry` folder 
 ####2. Open `assignment.md`
 ####3. Follow instructions to complete the assignment.
+
+###Eliminate Effects Between Unrelated Things
+Design components that are self-contained, independent, and have a single, well-defined purpose.
+
+###Use Tracer Bullets to Find the Target
+Tracer bullets let you home in on your target by trying things and seeing how close they land.
+
+###Program Close to the Problem Domain
+Design and code in your user’s language.
+
+###Iterate the Schedule with the Code
+Use experience you gain as you implement to refine the project time scales.
