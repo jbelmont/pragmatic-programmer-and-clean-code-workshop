@@ -72,7 +72,7 @@ function MathImpl2(numbers) {
             .map(val => Math.pow(Math.abs(val - avg), 2))
             .reduce((prev, curr) => prev + curr, 0) / this.numbers.length;
         return this.printWithTwoCharacters(Math.sqrt(summation));
-    }
+    };
 
     this.printWithTwoCharacters = standardDeviation => {
         return Number(standardDeviation.toFixed(2));
@@ -97,7 +97,7 @@ MathImpl3.prototype.standardDeviation = (numbers) => {
         .map(val => Math.pow(Math.abs(val - avg), 2))
         .reduce((prev, curr) => prev + curr, 0) / numbers.length;
     return MathImpl3.prototype.printWithTwoCharacters.call(null, Math.sqrt(summation));
-}
+};
 
 const average3 = input => {
     return input.reduce((prev, curr) => prev + curr, 0) / input.length;

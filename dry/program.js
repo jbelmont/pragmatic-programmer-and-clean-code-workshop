@@ -17,11 +17,11 @@ function uglyStandardDeviation(numbers) {
     }
     const avg = sum / numbers.length;
 
-    let summation;
+    let summation = 0;
     for (let i = 0; i < numbers.length; i++) {
-        summation += Math.pow(Math.abs(val - avg), 2);
+        summation += Math.pow(Math.abs(numbers[i] - avg), 2);
     }
-    return summation / numbers.length;
+    return Number(Math.sqrt(summation / numbers.length).toFixed(2));
 }
 
 module.exports = {

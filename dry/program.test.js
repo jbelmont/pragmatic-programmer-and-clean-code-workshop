@@ -35,14 +35,14 @@ test('Test ugly standardDeviation', t => {
 });
 
 test('Implement standardDeviation', t => {
+    // TODO: Add either a standardDeviation function or JavaScript Class
+    // The name is arbitrary feel free to change it, I did in the solution.
     const {
-        MathImpl
+        standardDeviation
     } = require('./program');
 
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const mathImpl = new MathImpl(numbers);
-
-    const actual = mathImpl.standardDeviation();
+    const actual = standardDeviation(numbers);
     const expected = 2.87;
     t.is(actual, expected, `standardDeviation returns ${expected}`);
 });
