@@ -25,3 +25,8 @@ How to spot clear violations to SRP?
 3. After you have created your function, look through it again and see how many reusable functions that you can extract.
 
 Open program.js and look at the current implement and see if you can make functions that have a single purpose and still accomplish the same task.
+I created a set of empty function for you to use.
+Check out the documentation on fs and specifically
+[fs.readFile](https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback)
+[fs.writeFile](https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback)
+[fs.unlink](https://nodejs.org/api/fs.html#fs_fs_unlink_path_callback)
