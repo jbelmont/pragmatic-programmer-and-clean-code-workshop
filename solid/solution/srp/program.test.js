@@ -5,7 +5,7 @@ const sinon = require('sinon');
 
 const program = require('./program');
 
-let soldiers, soldiersPayload, soldiersField, readSoldiersStub, formatSoldiersStub, sandbox;
+let soldiers, soldiersPayload, readSoldiersStub, formatSoldiersStub, writeSoldiersStub, sandbox;
 test('setup', t => {
   soldiers = [
     {
@@ -43,20 +43,14 @@ test('setup', t => {
     'Guy Dude,Navy,Petty Officer'
   ];
 
-  soldiersField = {
-    name: 'John Doe',
-    rank: 'Private',
-    branch: 'Coast Guard'
-  };
-
   sandbox = sinon.sandbox.create();
   readSoldiersStub = sandbox.stub(program, 'readSoldiers').returns(soldiersPayload);
   formatSoldiersStub = sandbox.stub(program, 'formatSoldiers').returns(soldiers);
+  writeSoldiersStub = sandbox.stub(program, 'writeSoldiers').returns(200);
   t.end();
 });
 
 test('Practice Concepts in single responsibility principle', nest => {
-
   nest.test('readSoldiers should return an array of soldiers', assert => {
     const getSoldiers = readSoldiersStub();
     const expected = soldiersPayload;
@@ -71,6 +65,12 @@ test('Practice Concepts in single responsibility principle', nest => {
     assert.end();
   });
 
+  nest.test('createFile with JSON object', assert => {
+    writeSoldiersStub();
+    const expected = 200;
+    assert.doesNotThrow(writeSoldiersStub, expected, 'should not return an error');
+    assert.end();
+  });
 });
 
 test('teardown', t => {

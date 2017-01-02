@@ -28,5 +28,17 @@ const formatSoldiers = () => {
     });
 };
 
+const writeSoldiers = () => {
+  return formatSoldiers()
+    .then(soldiers => {
+      fs.writeFile(join(__dirname, 'soldiers.json'), JSON.stringify(soldiers), (err) => {
+        if (err) {
+          throw err;
+        }
+      });
+    });
+};
+
 exports.readSoldiers = readSoldiers;
 exports.formatSoldiers = formatSoldiers;
+exports.writeSoldiers = writeSoldiers;
