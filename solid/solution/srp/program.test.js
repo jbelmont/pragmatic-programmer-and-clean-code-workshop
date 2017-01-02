@@ -46,7 +46,13 @@ test('setup', t => {
   sandbox = sinon.sandbox.create();
   readSoldiersStub = sandbox.stub(program, 'readSoldiers').returns(soldiersPayload);
   formatSoldiersStub = sandbox.stub(program, 'formatSoldiers').returns(soldiers);
-  writeSoldiersStub = sandbox.stub(program, 'writeSoldiers').returns(200);
+  writeSoldiersStub = sandbox.stub(program, 'writeSoldiers');
+  writeSoldiersStub.withArgs().throws({
+    err: {
+      message: '400'
+    }
+  });
+  writeSoldiersStub.withArgs(soldiers).returns(200);
   t.end();
 });
 
@@ -66,9 +72,13 @@ test('Practice Concepts in single responsibility principle', nest => {
   });
 
   nest.test('createFile with JSON object', assert => {
-    writeSoldiersStub();
-    const expected = 200;
-    assert.doesNotThrow(writeSoldiersStub, expected, 'should not return an error');
+    try {
+      writeSoldiersStub();
+    } catch (e) {
+      sinon.assert.threw(writeSoldiersStub);
+    }
+    writeSoldiersStub(soldiers);
+    sinon.assert.calledWith(writeSoldiersStub, soldiers);
     assert.end();
   });
 });
