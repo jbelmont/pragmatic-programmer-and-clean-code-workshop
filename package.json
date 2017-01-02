@@ -10,7 +10,7 @@
     "dry:test:solution": "ava --verbose dry/solution/program.test.js",
     "dry:test:solution:debug": "npm run ava:debug dry/solution/program.test.js",
     "ava:debug": "node --inspect node_modules/ava/profile.js",
-    "solid:srp:test": "tape solid/srp/program.test.js",
+    "solid:srp:test": "ava --verbose solid/srp/program.test.js",
     "solid:srp:test:solution": "tape solid/solution/srp/program.test.js"
   },
   "repository": {

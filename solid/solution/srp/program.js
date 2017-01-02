@@ -15,17 +15,14 @@ const readSoldiers = () => {
   });
 };
 
-const formatSoldiers = () => {
-  return readSoldiers()
-    .then(soldiers => {
-      return soldiers.map(soldier => soldier.split(',')).map((field) => {
-        return {
-          name: field[0],
-          rank: field[1],
-          branch: field[2]
-        };
-      });
-    });
+const formatSoldiers = (soldiers) => {
+  return soldiers.map(soldier => soldier.split(',')).map((field) => {
+    return {
+      name: field[0],
+      rank: field[1],
+      branch: field[2]
+    };
+  });
 };
 
 const writeSoldiers = (soldiers) => {
@@ -35,8 +32,6 @@ const writeSoldiers = (soldiers) => {
     }
   });
 };
-
-writeSoldiers({name: 'Rambo'});
 
 exports.readSoldiers = readSoldiers;
 exports.formatSoldiers = formatSoldiers;

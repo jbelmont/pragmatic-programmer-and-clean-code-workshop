@@ -44,8 +44,10 @@ test('setup', t => {
   ];
 
   sandbox = sinon.sandbox.create();
-  readSoldiersStub = sandbox.stub(program, 'readSoldiers').returns(soldiersPayload);
-  formatSoldiersStub = sandbox.stub(program, 'formatSoldiers').returns(soldiers);
+  readSoldiersStub = sandbox.stub(program, 'readSoldiers').returns(Promise.resolve(soldiersPayload));
+  formatSoldiersStub = sandbox.stub(program, 'formatSoldiers');
+  formatSoldiersStub.withArgs().throws('TypeError');
+  formatSoldiersStub.withArgs(soldiersPayload).returns(soldiers);
   writeSoldiersStub = sandbox.stub(program, 'writeSoldiers');
   writeSoldiersStub.withArgs().throws({
     err: {
@@ -58,29 +60,44 @@ test('setup', t => {
 
 test('Practice Concepts in single responsibility principle', nest => {
   nest.test('readSoldiers should return an array of soldiers', assert => {
-    const getSoldiers = readSoldiersStub();
-    const expected = soldiersPayload;
-    assert.deepEqual(getSoldiers, expected, 'should return an array of soldiers');
-    assert.end();
+    readSoldiersStub().then(soldiers => {
+      const expected = soldiersPayload;
+      assert.deepEqual(soldiers, expected, 'should return an array of soldiers');
+      assert.end();
+    });
   });
 
-  nest.test('formatSoldiers should return a JSON object', assert => {
-    const formatSoldiers = formatSoldiersStub();
+  nest.test('calling formatSoldiers with no args should return an error', assert => {
+    try {
+      formatSoldiersStub();
+    } catch(e) {
+      sinon.assert.threw(formatSoldiersStub, 'TypeError');
+      assert.end();
+    }
+  });
+
+  nest.test('calling formatSoldiers with 1 arg should return a JSON object', assert => {
+    const formatSoldiers = formatSoldiersStub(soldiersPayload);
     const expected = soldiers;
     assert.deepEqual(formatSoldiers, expected, 'should return a json object with soldiers');
     assert.end();
   });
 
-  nest.test('createFile with JSON object', assert => {
+  nest.test('calling createFile with no args should return an error', assert => {
     try {
       writeSoldiersStub();
     } catch (e) {
       sinon.assert.threw(writeSoldiersStub);
     }
+    assert.end();
+  });
+
+  nest.test('calling createFile with 1 arg should return no error and a payload', assert => {
     writeSoldiersStub(soldiers);
     sinon.assert.calledWith(writeSoldiersStub, soldiers);
     assert.end();
   });
+
 });
 
 test('teardown', t => {

@@ -23,3 +23,5 @@ How to spot clear violations to SRP?
     * A function like this should be broken into multiple parts.
 2. For each function that you create, think about whether some parts would be better if you extracted them into another smaller function.
 3. After you have created your function, look through it again and see how many reusable functions that you can extract.
+
+Open program.js and look at the current implement and see if you can make functions that have a single purpose and still accomplish the same task.
