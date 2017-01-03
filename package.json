@@ -12,7 +12,9 @@
     "ava:debug": "node --inspect node_modules/ava/profile.js",
     "solid:srp:test": "ava --verbose solid/srp/program.test.js",
     "postsolid:srp:test": "rimraf solid/srp/soldiers.json",
-    "solid:srp:test:solution": "tape solid/solution/srp/program.test.js"
+    "solid:srp:test:solution": "tape solid/solution/srp/program.test.js",
+    "solid:ocp:test": "tape solid/ocp/program.test.js",
+    "solid:ocp:test:solution": "tape solid/solution/ocp/program.test.js"
   },
   "repository": {
     "type": "git",
