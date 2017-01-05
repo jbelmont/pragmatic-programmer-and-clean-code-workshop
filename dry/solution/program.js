@@ -83,19 +83,19 @@ function MathImpl3(numbers) {
   this.numbers = numbers;
 }
 
-MathImpl3.prototype.average = (numbers) => {
-  return numbers.reduce((previous, current) => previous + current, 0) / numbers.length;
+MathImpl3.prototype.average = function() {
+  return this.numbers.reduce((previous, current) => previous + current, 0) / this.numbers.length;
 };
 
-MathImpl3.prototype.printWithTwoCharacters = standardDeviation => {
+MathImpl3.prototype.printWithTwoCharacters = function(standardDeviation) {
   return Number(standardDeviation.toFixed(2));
 };
 
-MathImpl3.prototype.standardDeviation = (numbers) => {
-  const avg = MathImpl3.prototype.average.call(null, numbers);
-  const summation = numbers
+MathImpl3.prototype.standardDeviation = function() {
+  const avg = MathImpl3.prototype.average.call(this);
+  const summation = this.numbers
         .map(val => Math.pow(Math.abs(val - avg), 2))
-        .reduce((prev, curr) => prev + curr, 0) / numbers.length;
+        .reduce((prev, curr) => prev + curr, 0) / this.numbers.length;
   return MathImpl3.prototype.printWithTwoCharacters.call(null, Math.sqrt(summation));
 };
 

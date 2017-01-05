@@ -45,7 +45,7 @@ test('Test ugly standardDeviation', t => {
 
   const actual = uglyStandardDeviation(numbers);
   const expected = 2.87;
-  t.is(actual, expected, `standardDeviation returns ${expected}`);    
+  t.is(actual, expected, `standardDeviation returns ${expected}`);
 });
 
 test('Test standardDeviation in MathImpl class', t => {
@@ -69,7 +69,7 @@ test('Test standardDeviation in MathImpl2 class', t => {
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const mathImplement = new MathImpl2(numbers);
 
-  const actual = mathImplement.standardDeviation(numbers);
+  const actual = mathImplement.standardDeviation();
   const expected = 2.87;
   t.is(actual, expected, `standardDeviation returns ${expected}`);
 });
@@ -82,7 +82,7 @@ test('Test standardDeviation in MathImpl3 class', t => {
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const mathImplement = new MathImpl3(numbers);
 
-  const actual = mathImplement.standardDeviation(numbers);
+  const actual = mathImplement.standardDeviation();
   const expected = 2.87;
   t.is(actual, expected, `standardDeviation returns ${expected}`);
 });
