@@ -19,6 +19,28 @@ Registry.prototype.registerState = function (name, value) {
   this._values[name] = value;
 };
 
+class CreateStore {
+  constructor(reducers, preloadedState) {
+    this.reducers = reducers || [];
+    this.preloadedState = preloadedState;
+  }
+
+  getPreloadedState() {
+    return this.preloadedState;
+  }
+
+  getNewState(state, action) {
+    return this.reducers.reduce((state, reducer) => {
+      return reducer.getNewState(state, action);
+    }, state);
+  }
+
+  register(reducer) {
+    this.reducers.push(reducer);
+  }
+}
+
 module.exports = {
-  Registry
+  Registry,
+  CreateStore
 };

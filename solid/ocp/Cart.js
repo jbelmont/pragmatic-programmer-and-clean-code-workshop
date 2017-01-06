@@ -1,3 +1,5 @@
+'use strict';
+
 function Cart(registry, cart) {
   this.cart = cart || [];
 
@@ -20,6 +22,49 @@ function ShoppingCart(cart) {
   this.cart = cart;
 }
 
+const {CreateStore} = require('./Registry');
+const {ADD_CART} = require('./constants');
+
+class Cart2 extends CreateStore {
+  constructor(reducers, preloadedState) {
+    super(reducers, preloadedState);
+  }
+  getNewState(state, action) {
+    const {
+      type,
+      items
+    } = action;
+    if (type == ADD_CART) {
+      return [
+        ...state,
+        items
+      ];
+    } else {
+      return state;
+    }
+  }
+}
+
+const {
+  projector
+} = require('./Composition');
+
+const Cart3 = (state) => {
+  return projector(state, (state) => {
+    return [].concat([], state);
+  });
+};
+
+const CreateStore2 = (oldState, state) => {
+  return () => {
+    return [].concat.call([], oldState, state);
+  };
+};
+
+
 module.exports = {
-  Cart
+  Cart,
+  Cart2,
+  Cart3,
+  CreateStore2
 };
