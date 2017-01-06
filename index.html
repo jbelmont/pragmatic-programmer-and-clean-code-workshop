@@ -60,7 +60,7 @@
 						<p>Classes should have a single responsibility.</p>
 					</section>
 					<section>
-						<h5>Loose Coupling <a href="http://en.wikipedia.org/wiki/Coupling_">Coupling_(computer_science)</a></h5>
+						<h5>Loose Coupling <a href="http://en.wikipedia.org/wiki/Coupling_">Coupling computer science</a></h5>
 						<p>Coupling assesses how tightly a module is related to other modules</p>
 						<ul>
 							<li>Goal is loose coupling:</li>
@@ -69,31 +69,80 @@
 						</ul>
 					</section>
 				</section>
+        <section>
+          <section>
+            <h5>SOLID Principles</h5>
+            <ul>
+              <li>Single Responsibility Principle (SRP)</li>
+              <li>Open-Closed Principle (OCP)</li>
+              <li>Liskov Substition Principle (LSP)</li>
+              <li>Interface Segregation Principle (ISP)</li>
+              <li>Dependency Inversion Principle (DIP)</li>
+            </ul>
+          </section>
+          <section>
+            <h5>Single Responsibility Principle</h5>
+            <p>A class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class</p>
+            <p>I am going to extend this and say a function should only have a single responsibility as well.</p>
+            <p>Higher Order functions fit in this principle as they a single responsibility of taking in another function.</p>
+          </section>
+          <section>
+            <h5>Open-Closed Principle</h5>
+            <p>software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification"</p>
+            <p>An entity can allow its behaviour to be extended without modifying its source code.</p>
+            <p>In other words you don't open the only original file to alter it. Interfaces in languages such as Java and C# are usually used to demonstrate this principles.</p>
+          </section>
+          <section>
+            <h5>Liskov Substition Principle</h5>
+            <p>Let $ \phi(x) $ be a property provable about objects x of type T. Then $ \phi (y) $ should be true for objects y of type S where S is a subtype of T.</p>
+            <p>Subtypes must be substitutable for their base types.</p>
+          </section>
+          <section>
+            <h5>Interface Segregation Principle</h5>
+            <p>No client should be forced to depend on methods it does not use.</p>
+            <p>ISP splits interfaces that are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. Such shrunken interfaces are also called role interfaces.</p>
+            <p>ISP is intended to keep a system decoupled and thus easier to refactor, change, and redeploy.</p>
+          </section>
+          <section>
+            <h5>Dependency Inversion Principle</h5>
+            <ul>
+              <li>A. High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+              <li>B. Abstractions should not depend on details. Details should depend on abstractions.</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h5>Go into srp folider in solid parent folder `cd solid/srp` and open assignment.md</h5>
+          <p>Follow the instructions to complete the assignment</p>
+        </section>
+        <section>
+          <h5>There will not be an exercise for the open-closed principle instead I would everyone to mob program and come up with their own approaches and modify my examples.</h5>
+        </section>
         </div>
 		<script src="lib/js/head.min.js"></script>
         <script src="reveal.js"></script>
-        <script>			
+        <script>
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
-				transition: 'convex',    
+				transition: 'convex',
 				math: {
 					mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
 					config: 'TeX-AMS_HTML-full'
-				},            
+				},
 				dependencies: [
-					{ 
-						src: 'plugin/highlight/highlight.js', 
-						async: true, 
-						callback: function() { 
-							hljs.initHighlightingOnLoad(); 
-						} 
+					{
+						src: 'plugin/highlight/highlight.js',
+						async: true,
+						callback: function() {
+							hljs.initHighlightingOnLoad();
+						}
 					},
-					{ 
-						src: 'plugin/math/math.js', 
-						async: true 
+					{
+						src: 'plugin/math/math.js',
+						async: true
 					}
 				]
 			});
