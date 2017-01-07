@@ -14,7 +14,10 @@
     "postsolid:srp:test": "rimraf solid/srp/soldiers.json",
     "solid:srp:test:solution": "tape solid/solution/srp/program.test.js",
     "solid:ocp:test": "tape solid/ocp/program.test.js",
-    "solid:ocp:test:solution": "tape solid/solution/ocp/program.test.js"
+    "solid:ocp:test:solution": "tape solid/solution/ocp/program.test.js",
+    "solid:lsp:test": "ava --verbose solid/lsp/program.test.js",
+    "solid:isp:test": "tape solid/isp/program.test.js",
+    "solid:lsp:test:solution": "tape solid/solution/isp/program.test.js"
   },
   "repository": {
     "type": "git",
