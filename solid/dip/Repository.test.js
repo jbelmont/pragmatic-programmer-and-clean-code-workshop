@@ -1,21 +1,17 @@
 const test = require('ava');
 const sinon = require('sinon');
+const {Repository} = require('./Repository');
 
-const Repository = require('./Repository');
-
-class TestRepository extends Repository {
-  constructor(db) {
-    super(db);
-  }
-}
-
-let db;
+let insertStub, updateStub, retrieveStub, deleteStub;
 test.beforeEach(t => {
-  db = {
-    retrieve: sinon.stub(TestRepository, 'insert'),
-    insert: sinon.stub(TestRepository, 'insert'),
-    update: sinon.stub(TestRepository, 'update'),
-    delete: sinon.stub(TestRepository, 'delete')
-  };
+  const Repo = new Repository();
+  insertStub = sinon.stub(Repo, 'insert');
+  updateStub = sinon.stub(Repo, 'update');
+  retrieveStub = sinon.stub(Repo, 'retrieveDocument');
+  deleteStub = sinon.stub(Repo, 'delete');
+  t.pass(true);
 });
 
+test('TestRepository should return methods', assert => {
+  assert.pass(true);
+});

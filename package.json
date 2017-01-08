@@ -17,7 +17,8 @@
     "solid:ocp:test:solution": "tape solid/solution/ocp/program.test.js",
     "solid:lsp:test": "ava --verbose solid/lsp/program.test.js",
     "solid:isp:test": "tape solid/isp/program.test.js",
-    "solid:lsp:test:solution": "tape solid/solution/isp/program.test.js"
+    "solid:lsp:test:solution": "tape solid/solution/isp/program.test.js",
+    "solid:dip:test": "ava --verbose solid/dip/Repository.test.js"
   },
   "repository": {
     "type": "git",
@@ -64,6 +65,7 @@
     "eslint-plugin-standard": "^2.0.1",
     "nock": "^9.0.2",
     "nyc": "^10.0.0",
+    "proxyquire": "^1.7.10",
     "rimraf": "^2.5.4",
     "shelljs": "^0.7.5",
     "sinon": "^2.0.0-pre.5",
