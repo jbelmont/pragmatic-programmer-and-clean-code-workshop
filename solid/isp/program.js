@@ -24,5 +24,20 @@ Rectangle.prototype.area = function() {
   return this.width * this.height;
 };
 
+function Circle() {}
+
+Circle.prototype.setPI = function(PI) {
+  this.PI = PI;
+};
+
+Circle.prototype.setRadius = function(radius) {
+  this.radius = radius;
+};
+
+Circle.prototype.area = function() {
+  return (this.PI * Math.pow(this.radius, 2)).toFixed(4);
+};
+
 exports.Square = Square;
 exports.Rectangle = Rectangle;
+exports.Circle = Circle;

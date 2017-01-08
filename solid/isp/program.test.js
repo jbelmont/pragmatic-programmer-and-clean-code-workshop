@@ -27,6 +27,18 @@ test('test area of Rectangle', assert => {
   assert.end();
 });
 
+test('test area of circle', assert => {
+  const {Circle} = require('./program');
+  const PI = Math.PI, radius = 5;
+  const circle = new Circle();
+  circle.setPI(PI);
+  circle.setRadius(radius);
+  const actual = circle.area();
+  const expected = (PI * Math.pow(radius, 2)).toFixed(4);
+  assert.equal(actual, expected, `area of circle with radius of ${radius} should be ${expected}`);
+  assert.end();
+});
+
 test('teardown', assert => {
   assert.end();
 });
