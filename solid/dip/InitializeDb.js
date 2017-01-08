@@ -46,7 +46,7 @@ function insertInitialDocument({dbName, name}) {
   });
 }
 
-function dbActions({ dbName = 'softwaretesting', name = 'users' } = {}) {
+function dbActions({ dbName = 'pragmaticprogrammer', name = 'users' } = {}) {
   return createDbConnection({dbName, name});
 }
 

@@ -1,5 +1,5 @@
 module.exports = {
-  usersModel: [
+  users: [
     {'id':1,'first_name':'Timothy','last_name':'Cox','email':'tcox0@dion.ne.jp','gender':'Male'},
     {'id':2,'first_name':'Sean','last_name':'Medina','email':'smedina1@addthis.com','gender':'Male'},
     {'id':3,'first_name':'Jonathan','last_name':'Tucker','email':'jtucker2@tripadvisor.com','gender':'Male'},
