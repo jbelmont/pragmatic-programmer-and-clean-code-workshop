@@ -2,7 +2,8 @@ const test = require('ava');
 const sinon = require('sinon');
 const {Repository} = require('./Repository');
 
-let insertStub, insertDoc, insertResult, updateStub, retrieveStub, retrieveDoc, retrieveResult, deleteStub, sandbox;
+let insertStub, insertDoc, insertResult, retrieveStub, retrieveDoc, retrieveResult, retrieveErrorResult;
+let deleteStub, updateStub, sandbox;
 test.before(t => {
   sandbox = sinon.sandbox.create();
   const Repo = new Repository();
@@ -40,6 +41,13 @@ test.before(t => {
     hero1: 'hero1',
     hero2: 'hero2'
   };
+  retrieveErrorResult = {
+    error: {
+      message: 'Improper arguments passed'
+    }
+  };
+  retrieveStub.withArgs().returns(Promise.reject(retrieveErrorResult));
+  retrieveStub.withArgs(retrieveDoc.dbName, retrieveDoc.name).returns(Promise.resolve(retrieveResult));
   deleteStub = sandbox.stub(Repo, 'delete');
   t.pass(true);
 });
@@ -49,7 +57,7 @@ test.after('cleanup', t => {
   t.pass(true);
 });
 
-test('test insert method in Repository Pattern throws expection when given improper arguments', assert => {
+test('test insert method returns error object when given improper arguments', assert => {
   insertStub()
     .then(result => result)
     .catch(error => {
@@ -59,23 +67,28 @@ test('test insert method in Repository Pattern throws expection when given impro
     });
 });
 
-test('test insert method in Repository Pattern returns an object when given proper arguments', assert => {
+test('test insert method returns an object when given proper arguments', assert => {
   insertStub(insertDoc.dbName, insertDoc.name, insertDoc.body).then(actual => {
     const expected = insertResult;
     assert.is(actual, expected, `should return ${expected}`);
   });
 });
 
-test('test retrieveDocument method in Repository Pattern returns object when given proper arguments', assert => {
-  try {
-    const {Repository} = require('./Repository');
-    const repo = new Repository();
-    repo.retrieveDocument(retrieveDoc).then(result => {
-      const {hero1} = result;
-      const expected = 'hero1';
-      assert.is(hero1, expected, `should return ${expected}`);
+test('test retrieveDocument method returns error object when given improper arguments', assert => {
+  retrieveStub()
+    .then(result => result)
+    .catch(error => {
+      const actual = error['error']['message'];
+      const expected = retrieveErrorResult.error.message;
+      assert.is(actual, expected, `should return string: ${expected}`);
     });
-  } catch (error) {
-    console.log(error);
-  }
+});
+
+test('test retrieveDocument method returns object when gien proper arugments', assert => {
+  retrieveStub(retrieveDoc.dbName, retrieveDoc.name)
+    .then(result => {
+      const actual = result['hero1'];
+      const expected = retrieveResult['hero1'];
+      assert.is(actual, expected, `should return ${expected}`);
+    });
 });
