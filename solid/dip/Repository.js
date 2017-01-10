@@ -56,7 +56,7 @@ class Repository extends Db {
       });
   }
 
-  delete(dbName, name) {
+  delete({dbName, name}) {
     const couchDBName = nano.use(dbName);
     return this.retrieveDoc({dbName: couchDBName, name})
       .then(body => {
