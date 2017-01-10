@@ -71,6 +71,7 @@
     "sinon": "^2.0.0-pre.5",
     "supertest": "^2.0.1",
     "tap-nyan": "^1.1.0",
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "testdouble": "^1.10.2"
   }
 }
