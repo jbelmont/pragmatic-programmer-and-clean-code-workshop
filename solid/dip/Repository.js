@@ -40,16 +40,20 @@ class Repository extends Db {
     });
   }
 
-  update(dbName, name, body) {
-    return new Promise((resolve, reject) => {
-      dbName.insert(body, name, (err, body) => {
-        if (!err) {
-          resolve(body);
-        } else {
-          reject(err);
-        }
+  update({dbName, name, body}) {
+    return this.retrieveDocument({ dbName, name})
+      .then(result => {
+        const rev = result['_rev'];
+        const id = result['_id'];
+        const newerBody = Object.assign({}, body, { _rev: rev, _id: id });
+        const couchDBName = nano.use(dbName);
+        return couchDBName.insert(newerBody, (err, body) => {
+          if (err) {
+            throw err;
+          }
+          return body;
+        });
       });
-    });
   }
 
   delete(dbName, name) {

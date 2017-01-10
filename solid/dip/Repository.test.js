@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const {Repository} = require('./Repository');
 
 let insertStub, insertDoc, insertResult, retrieveStub, retrieveDoc, retrieveResult, retrieveErrorResult;
-let deleteStub, updateStub, sandbox;
+let deleteStub, updateStub, updateDoc, updateResult, sandbox;
 test.before(t => {
   sandbox = sinon.sandbox.create();
   const Repo = new Repository();
@@ -29,7 +29,6 @@ test.before(t => {
     hero2: 'hero2'
   };
   insertStub.withArgs(insertDoc.dbName, insertDoc.name, insertDoc.body).returns(Promise.resolve(insertResult));
-  updateStub = sandbox.stub(Repo, 'update');
   retrieveStub = sandbox.stub(Repo, 'retrieveDocument');
   retrieveDoc = {
     dbName: 'pragmaticprogrammer',
@@ -48,6 +47,20 @@ test.before(t => {
   };
   retrieveStub.withArgs().returns(Promise.reject(retrieveErrorResult));
   retrieveStub.withArgs(retrieveDoc.dbName, retrieveDoc.name).returns(Promise.resolve(retrieveResult));
+  updateStub = sandbox.stub(Repo, 'update');
+  updateDoc = {
+    dbName: 'pragmaticprogrammer',
+    name: 'example1',
+    body: {
+      songs: ['Everybody Want to Rule the World', 'Thriller', 'No Sleep for Brooklyn']
+    }
+  };
+  updateResult = {
+    body: {
+      'songs': ['Everybody Want to Rule the World', 'Thriller', 'No Sleep for Brooklyn']
+    }
+  };
+  updateStub.withArgs(updateDoc.dbName, updateDoc.name, updateDoc.body).returns(Promise.resolve(updateResult));
   deleteStub = sandbox.stub(Repo, 'delete');
   t.pass(true);
 });
@@ -90,5 +103,14 @@ test('test retrieveDocument method returns object when gien proper arugments', a
       const actual = result['hero1'];
       const expected = retrieveResult['hero1'];
       assert.is(actual, expected, `should return ${expected}`);
+    });
+});
+
+test('test update method updates object and returns newer object', assert => {
+  updateStub(updateDoc.dbName, updateDoc.name, updateDoc.body)
+    .then(result => {
+      const actual = result['songs'];
+      const expected = ['Everybody Want to Rule the World', 'Thriller', 'No Sleep for Brooklyn'];
+      assert.deepEqual(actual, expected, `should return the following songs: ${expected}`);
     });
 });
