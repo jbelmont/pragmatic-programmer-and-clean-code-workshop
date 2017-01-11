@@ -14,6 +14,45 @@ Read the assignment.md file in order to complete the exercise.
 Some assignments may or may not have a program.js file that you will test.
 Each assignment will have a file called program.test.js.
 
+## DRY Assignment
+
+####1. Go to `dry` folder
+####2. Open `assignment.md`
+####3. Follow instructions to complete the assignment.
+####4. Run command `npm run dry:test`
+
+# Principles of Clean Code
+
+## SOLID
+
+1. Single Responsibility Principle
+  1. a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class).
+2. Open/Closed Principle
+  1. "software entities … should be open for extension, but closed for modification."
+3. Liskov Subsitution Principle
+  1. "objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
+4. Interface Segregation Principle
+  1. "many client-specific interfaces are better than one general-purpose interface."
+5. Dependency Inversion Principle
+  1. one should "depend upon abstractions, [not] concretions."
+
+### Exercise Instructions for SOLID
+1. Go to srp folder with `cd solid/srp`
+  1. Run command `npm run solid:srp:test`
+  2. Finish exercises by passing the tests.
+2. Go to ocp folder with `cd solid/ocp`
+  1. Run command `npm run solid:ocp:test`
+  2. Finish exercises by passing the tests.
+3. Go to lsp folder with `cd solid/lsp`
+  1. Run command `npm run solid:lsp:test`
+  2. Finish exercises by passing the tests.
+4. Go to isp folder with `cd solid/isp`
+  1. Run command `npm run solid:isp:test`
+  2. Finish exercises by passing the tests.
+5. Go to dip folder with `cd solid/dip`
+  1. Run command `npm run solid:dip:test`
+  2. Finish exercises by passing the tests.
+
 # Pragmatic Software Development Tips
 
 ###Care About Your Craft
@@ -33,12 +72,6 @@ Don’t be swayed by vendors, media hype, or dogma. Analyze information in terms
 
 ###DRY—Don’t Repeat Yourself
 Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
-
-##Assignment # 1
-
-####1. Go to `dry` folder
-####2. Open `assignment.md`
-####3. Follow instructions to complete the assignment.
 
 ###Eliminate Effects Between Unrelated Things
 Design components that are self-contained, independent, and have a single, well-defined purpose.
