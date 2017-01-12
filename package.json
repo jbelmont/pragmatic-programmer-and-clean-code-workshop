@@ -18,7 +18,8 @@
     "solid:lsp:test": "ava --verbose solid/lsp/program.test.js",
     "solid:isp:test": "tape solid/isp/program.test.js",
     "solid:lsp:test:solution": "tape solid/solution/isp/program.test.js",
-    "solid:dip:test": "ava --verbose solid/dip/Repository.test.js"
+    "solid:dip:test": "ava --verbose solid/dip/Repository.test.js",
+    "lod:test": "tape lod/LawOfDemeter.test.js"
   },
   "repository": {
     "type": "git",
