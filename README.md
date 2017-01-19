@@ -27,14 +27,19 @@ Each assignment will have a file called program.test.js.
 
 1. Single Responsibility Principle
   1. a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class).
+  2. * :scroll: [Single Responsibility Principle](docs/solid/srp.pdf)
 2. Open/Closed Principle
-  1. "software entities … should be open for extension, but closed for modification."
+  1. "software entities … should be open for extension, but closed for modification."\
+  2. * :scroll: [Open Closed Principle](docs/solid/ocp.pdf)
 3. Liskov Subsitution Principle
   1. "objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
+  2. * :scroll: [Liskov Substitution Principle](docs/solid/lsp.pdf)
 4. Interface Segregation Principle
   1. "many client-specific interfaces are better than one general-purpose interface."
+  2. * :scroll: [Interface Segregation Principle](docs/solid/isp.pdf)
 5. Dependency Inversion Principle
   1. one should "depend upon abstractions, [not] concretions."
+  2. * :scroll: [Dependency Inversion Principle](docs/solid/dip.pdf)
 
 ### Exercise Instructions for SOLID
 1. Go to srp folder with `cd solid/srp`
