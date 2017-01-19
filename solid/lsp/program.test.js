@@ -38,13 +38,13 @@ test('test area of circle', assert => {
 });
 
 test('test liskov substitution principle with by using generic Shape', assert => {
-  const {Circle2} = require('./Geometry');
+  const {Circle} = require('./Geometry');
   const {
     circle
   } = require('./constants');
   const PI = circle.PI;
   const radius = circle.radius;
-  const newCircle = new Circle2();
+  const newCircle = new Circle();
   newCircle.setRadius(radius);
   newCircle.setPI(PI);
   const actual = newCircle.area();
