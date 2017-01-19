@@ -1,5 +1,15 @@
 # Pragmatic Programmer and Clean Code
 
+## Table of Contents
+  1. [Setup](#setup)
+  2. [Assignments](#assignments)
+  3. [DRY Assignment](#dry-assignment)
+  4. [SOLID](#solid)
+  5. [SOLID Exercises](#exercise-instructions-for-solid)
+  6. [Law of Demeter](#law-of-demeter)
+  7. [Exercise for Law of Demeter](#exercise-for-law-of-demeter)
+  8. [Pragmatic Software Development Tips](#pragmatic-software-development-tips)
+
 This meetup will go over concepts from the books [Pragmatic Programmer](https://pragprog.com/book/tpp/the-pragmatic-programmer) and [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 
 # Setup instructions
@@ -58,13 +68,15 @@ Each assignment will have a file called program.test.js.
 5. Go to dip folder with `cd solid/dip`
   1. Run command `npm run solid:dip:test`
   2. Mob/Pair program Exercise
-  
+
 ## Law of Demeter
 The Law of Demeter (LoD) or principle of least knowledge is a design guideline for developing software, particularly object-oriented programs. In its general form, the LoD is a specific case of loose coupling.
 
 1. Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.
 2. Each unit should only talk to its friends; don't talk to strangers.
 3. Only talk to your immediate friends.
+
+* :scroll: [Law of Demeter](docs/demeter.pdf)
 
 ### Exercise for Law of Demeter
 This will be a group exercise where we mob program.
