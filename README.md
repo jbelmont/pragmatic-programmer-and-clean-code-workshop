@@ -1,7 +1,7 @@
 # Pragmatic Programmer and Clean Code
 
 ## Table of Contents
-  1. [Setup](#setup)
+  1. [Setup](#setup-instructions)
   2. [Assignments](#assignments)
   3. [DRY Assignment](#dry-assignment)
   4. [SOLID](#solid)
@@ -30,8 +30,6 @@ Each assignment will have a file called program.test.js.
 ####2. Open `assignment.md`
 ####3. Follow instructions to complete the assignment.
 ####4. Run command `npm run dry:test`
-
-# Principles of Clean Code
 
 ## SOLID
 
