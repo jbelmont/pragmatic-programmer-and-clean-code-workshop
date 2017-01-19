@@ -46,19 +46,30 @@ Each assignment will have a file called program.test.js.
   1. Run command `npm run solid:srp:test`
   2. Finish exercises by passing the tests.
 2. Go to ocp folder with `cd solid/ocp`
-  1. Run command `npm run solid:ocp:test`
-  2. Finish exercises by passing the tests.
+  1. Run command `npm run solid:ocp:test:solution`
+  2. Mob/Pair program Exercise
 3. Go to lsp folder with `cd solid/lsp`
-  1. Run command `npm run solid:lsp:test`
-  2. Finish exercises by passing the tests.
+  1. Run command `npm run solid:lsp:test:solution1`
+  2. Run command `npm run solid:lsp:test:solution2`
+  3. Mob/Pair program Exercise
 4. Go to isp folder with `cd solid/isp`
   1. Run command `npm run solid:isp:test`
-  2. Finish exercises by passing the tests.
+  2. Mob/Pair program Exercise
 5. Go to dip folder with `cd solid/dip`
   1. Run command `npm run solid:dip:test`
-  2. Finish exercises by passing the tests.
+  2. Mob/Pair program Exercise
+  
+## Law of Demeter
+The Law of Demeter (LoD) or principle of least knowledge is a design guideline for developing software, particularly object-oriented programs. In its general form, the LoD is a specific case of loose coupling.
 
-# Pragmatic Software Development Tips
+1. Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.
+2. Each unit should only talk to its friends; don't talk to strangers.
+3. Only talk to your immediate friends.
+
+### Exercise for Law of Demeter
+This will be a group exercise where we mob program.
+
+## Pragmatic Software Development Tips
 
 ###Care About Your Craft
 Why spend your life developing software unless you care about doing it well?
