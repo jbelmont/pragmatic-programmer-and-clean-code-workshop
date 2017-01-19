@@ -1,6 +1,6 @@
 # SOLID Principles
 
-* :scroll: [Single Responsibility Principle](SRP.1996.pdf)
+* :scroll: [Single Responsibility Principle](srp.pdf)
 
 * :scroll: [Open Closed Principle](ocp.pdf)
 
