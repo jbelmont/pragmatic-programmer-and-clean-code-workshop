@@ -6,177 +6,205 @@
     </head>
     <body>
         <div class="reveal">
-            <div class="slides">
-                <section>
-					<h4>Code Craftsmanship Saturdays Fifth Session</h4>
-					<p>Speaker Jean-Marcel Belmont</p>
-					<p>Topics today will revolve around the books Pragmatic Programmer and Clean Code</p>
-				</section>
-                <section>
-					<section>
-						<h3>Pragmatic Software Development Tips</h3>
-						<h5>Care About Your Craft</h5>
-						<p>Why spend your life developing software unless you care about doing it well?</p>
-					</section>
-
-					<section>
-						<h5>Provide Options, Don’t Make Lame Excuses</h5>
-						<p>Instead of excuses, provide options. Don’t say it can’t be done; explain what can be done.</p>
-					</section>
-
-					<section>
-						<h5>Be a Catalyst for Change</h5>
-						<p>You can’t force change on people. Instead, show them how the future might be and help them participate in creating it.</p>
-					</section>
-
-					<section>
-						<h5>Make Quality a Requirements Issue</h5>
-						<p>Involve your users in determining the project’s real quality requirements.</p>
-					</section>
-
-					<section>
-						<h5>Critically Analyze What You Read and Hear</h5>
-						<p>Don’t be swayed by vendors, media hype, or dogma. Analyze information in terms of you and your project.</p>
-					</section>
-
-          <section>
-            <h5>DRY—Don’t Repeat Yourself</h5>
-            <p>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</p>
-          </section>
-
-          <section>
-            <h5>Eliminate Effects Between Unrelated Things</h5>
-            <p>Design components that are self-contained, independent, and have a single, well-defined purpose.</p>
-          </section>
-
-          <section>
-            <h5>Use Tracer Bullets to Find the Target</h5>
-            <p>Tracer bullets let you home in on your target by trying things and seeing how close they land.</p>
-          </section>
-
-          <section>
-            <h5>Program Close to the Problem Domain</h5>
-            <p>Design and code in your user’s language.</p>
-          </section>
-        </section>
-				<section>
-					<section>
-						<h5>DRY—Don’t Repeat Yourself</h5>
-						<p>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</p>
-					</section>
-					<section>
-						<p>Go to the `dry` folder and open assignment.md</p>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h5>Eliminate Effects Between Unrelated Things</h5>
-					</section>
-					<section>
-						<h5>High Cohesion</h5>
-						<p>Cohesion refers to how closely the functions in a module are related</p>
-						<p>Modules should contain functions that logically belong together</p>
-						<p>Group functions that work on the same data</p>
-						<p>Classes should have a single responsibility.</p>
-					</section>
-					<section>
-						<h5>Loose Coupling <a href="http://en.wikipedia.org/wiki/Coupling_">Coupling computer science</a></h5>
-						<p>Coupling assesses how tightly a module is related to other modules</p>
-						<ul>
-							<li>Goal is loose coupling:</li>
-							<li>modules should depend on as few other modules as possible</li>
-							<li>Changes in modules should not impact other modules; easier to work with them separately</li>
-						</ul>
-					</section>
-				</section>
-        <section>
-          <section>
-            <h5>SOLID Principles</h5>
-            <ul>
-              <li>Single Responsibility Principle (SRP)</li>
-              <li>Open-Closed Principle (OCP)</li>
-              <li>Liskov Substition Principle (LSP)</li>
-              <li>Interface Segregation Principle (ISP)</li>
-              <li>Dependency Inversion Principle (DIP)</li>
-            </ul>
-          </section>
-          <section>
-            <h5>Single Responsibility Principle</h5>
-            <p>A class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class</p>
-            <p>I am going to extend this and say a function should only have a single responsibility as well.</p>
-            <p>Higher Order functions fit in this principle as they a single responsibility of taking in another function.</p>
-          </section>
-          <section>
-            <h5>Open-Closed Principle</h5>
-            <p>software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification"</p>
-            <p>An entity can allow its behaviour to be extended without modifying its source code.</p>
-            <p>In other words you don't open the only original file to alter it. Interfaces in languages such as Java and C# are usually used to demonstrate this principles.</p>
-          </section>
-          <section>
-            <h5>Liskov Substition Principle</h5>
-            <p>Let $ \phi(x) $ be a property provable about objects x of type T. Then $ \phi (y) $ should be true for objects y of type S where S is a subtype of T.</p>
-            <p>Subtypes must be substitutable for their base types.</p>
-          </section>
-          <section>
-            <h5>Interface Segregation Principle</h5>
-            <p>No client should be forced to depend on methods it does not use.</p>
-            <p>ISP splits interfaces that are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. Such shrunken interfaces are also called role interfaces.</p>
-            <p>ISP is intended to keep a system decoupled and thus easier to refactor, change, and redeploy.</p>
-          </section>
-          <section>
+          <div class="slides">
             <section>
-              <h5>Dependency Inversion Principle</h5>
-              <ul>
-                <li>A. High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
-                <li>B. Abstractions should not depend on details. Details should depend on abstractions.</li>
-              </ul>
+              <h4>Code Craftsmanship Saturdays Fifth Session</h4>
+              <p>Speaker Jean-Marcel Belmont</p>
+              <p>Topics today will revolve around the books Pragmatic Programmer and Clean Code</p>
             </section>
-            <section>
-              <p>In object-oriented design, the dependency inversion principle refers to a specific form of decoupling software modules. When following this principle, the conventional dependency relationships established from high-level, policy-setting modules to low-level, dependency modules are reversed, thus rendering high-level modules independent of the low-level module implementation details.</p>
+              <section>
+                <section>
+                  <h3>Pragmatic Software Development Tips</h3>
+                  <h5>Care About Your Craft</h5>
+                  <p>Why spend your life developing software unless you care about doing it well?</p>
+                </section>
+
+                <section>
+                  <h5>Provide Options, Don’t Make Lame Excuses</h5>
+                  <p>Instead of excuses, provide options. Don’t say it can’t be done; explain what can be done.</p>
+                </section>
+
+                <section>
+                  <h5>Be a Catalyst for Change</h5>
+                  <p>You can’t force change on people. Instead, show them how the future might be and help them participate in creating it.</p>
+                </section>
+
+                <section>
+                  <h5>Make Quality a Requirements Issue</h5>
+                  <p>Involve your users in determining the project’s real quality requirements.</p>
+                </section>
+
+                <section>
+                  <h5>Critically Analyze What You Read and Hear</h5>
+                  <p>Don’t be swayed by vendors, media hype, or dogma. Analyze information in terms of you and your project.</p>
+                </section>
+
+                <section>
+                  <h5>DRY—Don’t Repeat Yourself</h5>
+                  <p>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</p>
+                </section>
+
+                <section>
+                  <h5>Eliminate Effects Between Unrelated Things</h5>
+                  <p>Design components that are self-contained, independent, and have a single, well-defined purpose.</p>
+                </section>
+
+                <section>
+                  <h5>Use Tracer Bullets to Find the Target</h5>
+                  <p>Tracer bullets let you home in on your target by trying things and seeing how close they land.</p>
+                </section>
+
+                <section>
+                  <h5>Program Close to the Problem Domain</h5>
+                  <p>Design and code in your user’s language.</p>
+                </section>
+              </section>
+              <section>
+                <section>
+                  <h5>DRY—Don’t Repeat Yourself</h5>
+                  <p>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</p>
+                </section>
+                <section>
+                  <p>Go to the `dry` folder and open assignment.md</p>
+                </section>
+              </section>
+              <section>
+                <section>
+                  <h5>Eliminate Effects Between Unrelated Things</h5>
+                </section>
+                <section>
+                  <h5>High Cohesion</h5>
+                  <p>Cohesion refers to how closely the functions in a module are related</p>
+                  <p>Modules should contain functions that logically belong together</p>
+                  <p>Group functions that work on the same data</p>
+                  <p>Classes should have a single responsibility.</p>
+                </section>
+                <section>
+                  <h5>Loose Coupling <a href="http://en.wikipedia.org/wiki/Coupling_">Coupling computer science</a></h5>
+                  <p>Coupling assesses how tightly a module is related to other modules</p>
+                  <ul>
+                    <li>Goal is loose coupling:</li>
+                    <li>modules should depend on as few other modules as possible</li>
+                    <li>Changes in modules should not impact other modules; easier to work with them separately</li>
+                  </ul>
+                </section>
+              </section>
+              <section>
+                <section>
+                  <h5>SOLID Principles</h5>
+                  <ul>
+                    <li>Single Responsibility Principle (SRP)</li>
+                    <li>Open-Closed Principle (OCP)</li>
+                    <li>Liskov Substition Principle (LSP)</li>
+                    <li>Interface Segregation Principle (ISP)</li>
+                    <li>Dependency Inversion Principle (DIP)</li>
+                  </ul>
+                </section>
+                <section>
+                  <h5>Single Responsibility Principle</h5>
+                  <p>A class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class</p>
+                  <p>I am going to extend this and say a function should only have a single responsibility as well.</p>
+                  <p>Higher Order functions fit in this principle as they a single responsibility of taking in another function.</p>
+                </section>
+                <section>
+                  <h5>Open-Closed Principle</h5>
+                  <p>software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification"</p>
+                  <p>An entity can allow its behaviour to be extended without modifying its source code.</p>
+                  <p>In other words you don't open the only original file to alter it. Interfaces in languages such as Java and C# are usually used to demonstrate this principles.</p>
+                </section>
+                <section>
+                  <h5>Liskov Substition Principle</h5>
+                  <p>Let $ \phi(x) $ be a property provable about objects x of type T. Then $ \phi (y) $ should be true for objects y of type S where S is a subtype of T.</p>
+                  <p>Subtypes must be substitutable for their base types.</p>
+                </section>
+                <section>
+                  <h5>Interface Segregation Principle</h5>
+                  <p>No client should be forced to depend on methods it does not use.</p>
+                  <p>ISP splits interfaces that are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. Such shrunken interfaces are also called role interfaces.</p>
+                  <p>ISP is intended to keep a system decoupled and thus easier to refactor, change, and redeploy.</p>
+                </section>
+                <section>
+                  <section>
+                  <section>
+                    <h5>Dependency Inversion Principle</h5>
+                    <ul>
+                      <li>A. High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+                      <li>B. Abstractions should not depend on details. Details should depend on abstractions.</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <p>In object-oriented design, the dependency inversion principle refers to a specific form of decoupling software modules. When following this principle, the conventional dependency relationships established from high-level, policy-setting modules to low-level, dependency modules are reversed, thus rendering high-level modules independent of the low-level module implementation details.</p>
+                  </section>
+                  </section>
+                </section>
+              </section>
+              <section>
+                <h5>Go into srp folider in solid parent folder `cd solid/srp` and open assignment.md</h5>
+                <p>Follow the instructions to complete the assignment</p>
+              </section>
+              <section>
+                <section>
+                  <h5>There is not an assignment.md for the Open Closed Principle instead I would like everyone to mob program and come up with their own approaches and modify my examples.</h5>
+                </section>
+                <section>
+                  <p>npm run solid:ocp:test:solution</p>
+                </section>
+                <section>
+                  <p>Add some more tests together in solid/ocp/program.test.js and add another implementation file with a name of your choosing</p>
+                </section>
+              </section>
+              <section>
+                <section>
+                  <h5>There is not an assignment.md for the Liskov Substitution Principle instead I would like everyone to mob program and come up with their own approaches and modify my examples.</h5>
+                </section>
+                <section>
+                  <p>npm run solid:lsp:test:solution1 and npm run solid:lsp:test:solution2</p>
+                </section>
+                <section>
+                  <p>Add some more tests together in solid/lsp/program.test.js and add another implementation file with a name of your choosing</p>
+                </section>
+              </section>
+              <section>
+                <section>
+                  <h5>There is not an assignment.md for the Interface Segregation Principle instead I would like everyone to mob program and come up with their own approaches and modify my examples.</h5>
+                </section>
+                <section>
+                  <p>npm run solid:isp:test</p>
+                </section>
+                <section>
+                  <p>Add some more tests together in solid/isp/program.test.js and add another implementation file with a name of your choosing</p>
+                </section>
+              </section>
+              <section>
+                <section>
+                  <h5>There is not an assignment.md for the Dependency Inversion Principle instead I would like everyone to mob program and come up with their own approaches and modify my examples.</h5>
+                </section>
+                <section>
+                  <p>npm run solid:dip:test</p>
+                </section>
+                <section>
+                  <p>Add some more tests together in solid/dip/program.test.js and add another implementation file with a name of your choosing</p>
+                </section>
+              </section>
+              </section>
+              <section>
+                <section>
+                  <h5>Law of Demeter</h5>
+                  <p>The Law of Demeter (LoD) or principle of least knowledge is a design guideline for developing software, particularly object-oriented programs. In its general form, the LoD is a specific case of loose coupling.</p>
+                </section>
+                <section>
+                  <ol>
+                    <li>Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.</li>
+                    <li>Each unit should only talk to its friends; don't talk to strangers.</li>
+                    <li>Only talk to your immediate friends.</li>
+                  </ol>
+                </section>
+                <section>
+                  <p>No exercise instead let us discuss my implementation and mob program to come up with some other solutions.</p>
+                </section>
             </section>
-          </section>
-        </section>
-        <section>
-          <h5>Go into srp folider in solid parent folder `cd solid/srp` and open assignment.md</h5>
-          <p>Follow the instructions to complete the assignment</p>
-        </section>
-        <section>
-          <h5>There is not an assignment.md for the Open Closed Principle instead I would like everyone to mob program and come up with their own approaches and modify my examples.</h5>
-          <p>npm run solid:ocp:test:solution</p>
-          <p>Add some more tests together in solid/ocp/program.test.js and add another implementation file with a name of your choosing</p>
-        </section>
-        <section>
-          <h5>There is not an assignment.md for the Liskov Substitution Principle instead I would like everyone to mob program and come up with their own approaches and modify my examples.</h5>
-          <p>npm run solid:lsp:test:solution1 and npm run solid:lsp:test:solution2</p>
-          <p>Add some more tests together in solid/lsp/program.test.js and add another implementation file with a name of your choosing</p>
-        </section>
-        <section>
-          <h5>There is not an assignment.md for the Interface Segregation Principle instead I would like everyone to mob program and come up with their own approaches and modify my examples.</h5>
-          <p>npm run solid:isp:test</p>
-          <p>Add some more tests together in solid/isp/program.test.js and add another implementation file with a name of your choosing</p>
-        </section>
-        <section>
-          <h5>There is not an assignment.md for the Dependency Inversion Principle instead I would like everyone to mob program and come up with their own approaches and modify my examples.</h5>
-          <p>npm run solid:dip:test</p>
-          <p>Add some more tests together in solid/dip/program.test.js and add another implementation file with a name of your choosing</p>
-        </section>
-        <secton>
-          <section>
-            <h5>Law of Demeter</h5>
-            <p>The Law of Demeter (LoD) or principle of least knowledge is a design guideline for developing software, particularly object-oriented programs. In its general form, the LoD is a specific case of loose coupling.</p>
-          </section>
-          <section>
-            <ol>
-              <li>Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.</li>
-              <li>Each unit should only talk to its friends; don't talk to strangers.</li>
-              <li>Only talk to your immediate friends.</li>
-            </ol>
-          </section>
-          <section>
-            <p>No exercise instead let us discuss my implementation and mob program to come up with some other solutions.</p>
-          </section>
-        </secton>
-        </div>
+          </div>
+      </div>
 		<script src="lib/js/head.min.js"></script>
         <script src="reveal.js"></script>
         <script>
