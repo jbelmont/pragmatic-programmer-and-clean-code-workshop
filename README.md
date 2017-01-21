@@ -9,7 +9,8 @@
   6. [Law of Demeter](#law-of-demeter)
   7. [Exercise for Law of Demeter](#exercise-for-law-of-demeter)
   8. [YAGNI](docs/yagni.md)
-  9. [Pragmatic Software Development Tips](#pragmatic-software-development-tips)
+  9. [KISS](#kiss)
+  10. [Pragmatic Software Development Tips](#pragmatic-software-development-tips)
 
 This meetup will go over concepts from the books [Pragmatic Programmer](https://pragprog.com/book/tpp/the-pragmatic-programmer) and [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 
@@ -79,6 +80,9 @@ The Law of Demeter (LoD) or principle of least knowledge is a design guideline f
 
 ### Exercise for Law of Demeter
 This will be a group exercise where we mob program.
+
+### KISS
+Keep it Simple, Stupid is a simple concept about eliminating complexity.
 
 ## Pragmatic Software Development Tips
 
