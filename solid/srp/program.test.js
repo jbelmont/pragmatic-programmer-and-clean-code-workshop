@@ -3,6 +3,11 @@ const {join} = require('path');
 const shell = require('shelljs');
 
 test.before(assert => {
+  const result = shell.touch(join(__dirname, 'soldiers.json'));
+  assert.is(result.code, 0);
+});
+
+test.after(assert => {
   const result = shell.rm(join(__dirname, 'soldiers.json'));
   assert.is(result.code, 0);
 });
