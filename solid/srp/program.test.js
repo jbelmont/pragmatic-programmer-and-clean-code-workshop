@@ -7,11 +7,6 @@ test.before(assert => {
   assert.is(result.code, 0);
 });
 
-test.after(assert => {
-  const result = shell.rm(join(__dirname, 'soldiers.json'));
-  assert.is(result.code, 0);
-});
-
 test('test readSoldiersFormatSoldiersAndWriteSoldiers', assert => {
   const {readSoldiersFormatSoldiersAndWriteSoldiers} = require('./program');
   assert.truthy(readSoldiersFormatSoldiersAndWriteSoldiers, 'readSoldiersFormatSoldiersAndWriteSoldiers does exist');
@@ -25,7 +20,7 @@ test('test readSoldiersFormatSoldiersAndWriteSoldiers', assert => {
 });
 
 test('check if readSoldier returns a payload', assert => {
-  const {readSoldiers} = require('./program');
+  const {readSoldiers} = require('./program.solution');
   const expected = [
     'John Rambo,Army,Sergeant First Class',
     'Chuck Norris,Air Force,Tech Sergeant',
@@ -33,17 +28,17 @@ test('check if readSoldier returns a payload', assert => {
     'Luke Cage,Marines,Sergeant',
     'Guy Dude,Navy,Petty Officer'
   ];
-  readSoldiers(((err, data) => {
+  readSoldiers(function(err, data) {
     if (err) {
       assert.falsy(err);
     }
-    const soldiers = data.toString();
+    const soldiers = data;
     assert.is(soldiers, expected, 'should return a list of soldiers');
-  }));
+  });
 });
 
 test('test formatSoldiers', assert => {
-  const {formatSoldiers} = require('./program');
+  const {formatSoldiers} = require('./program.solution');
   const soldiers = [
     'John Rambo,Army,Sergeant First Class',
     'Chuck Norris,Air Force,Tech Sergeant',
@@ -83,7 +78,7 @@ test('test formatSoldiers', assert => {
 });
 
 test('test writeSoldiers', assert => {
-  const {writeSoldiers} = require('./program');
+  const {writeSoldiers} = require('./program.solution');
   const soldiers = [
     {
       name: 'John Rambo',
@@ -122,7 +117,7 @@ test('test writeSoldiers', assert => {
 });
 
 test('test removeSoldiers', assert => {
-  const {removeSoldiers} = require('./program');
+  const {removeSoldiers} = require('./program.solution');
   const filePath = `${__dirname}/soldiers.json`;
   removeSoldiers(filePath, (err) => {
     if (err) {
