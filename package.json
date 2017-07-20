@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Code-Craftsmanship-Saturdays/pragmatic-programmer-and-clean-code.git"
+    "url": "git+https://github.com/jbelmont/pragmatic-programmer-and-clean-code.git"
   },
   "author": "Jean-Marcel Belmont",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Code-Craftsmanship-Saturdays/pragmatic-programmer-and-clean-code/issues"
+    "url": "https://github.com/jbelmont/pragmatic-programmer-and-clean-code/issues"
   },
-  "homepage": "https://github.com/Code-Craftsmanship-Saturdays/pragmatic-programmer-and-clean-code#readme",
+  "homepage": "https://github.com/jbelmont/pragmatic-programmer-and-clean-code#readme",
   "dependencies": {},
   "devDependencies": {
     "reveal.js": "^3.3.0"
